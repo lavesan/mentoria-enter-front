@@ -6,6 +6,8 @@ import { NotFound } from "./containers/NotFound";
 
 function App() {
   const LazyForm = lazy(() => import("./containers/Form"));
+  const LazyRoutesVariables = lazy(() => import("./containers/RouteVariables"));
+  const LazyCustomHook = lazy(() => import("./containers/CustomHook"));
 
   return (
     <Router>
@@ -15,6 +17,11 @@ function App() {
           <Switch>
             <Route exact path="/" component={LazyForm} />
             <Route path="/props-and-state" component={PropsAndState} />
+            <Route
+              path="/routes-variables/:id"
+              component={LazyRoutesVariables}
+            />
+            <Route path="/custom-hook" component={LazyCustomHook} />
             <Route path="*" component={NotFound} />
           </Switch>
         </Suspense>
