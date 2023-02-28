@@ -11,6 +11,7 @@ export const Header = () => {
           Variáveis de rota
         </Link>
         <Link to="/custom-hook">Hook customizado</Link>
+        <Link to="/styling-page">Estilizando</Link>
         <Link to="/pagina-nova">Página não criada</Link>
       </nav>
     </header>

@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: red;
+
+    &Text {
+        color: white;
+        transition: 0.3s;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}
